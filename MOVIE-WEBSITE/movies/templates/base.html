@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ZION{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <h1 class="glitch-text">ZION</h1>
+            </div>
+            <nav>
+                <a href="{% url 'index' %}">Home</a>
+                <a href="{% url 'movies' %}">Movies</a>
+                <a href="{% url 'search' %}">Search</a>
+                <a href="{% url 'search' %}">Login</a>
+                <a href="{% url 'search' %}">Register</a>
+            </nav>
+        </div>
+    </header>    
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <div class="footer-links">
+                    <a href="#">Home</a> | 
+                    <a href="#">Categories</a> | 
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-discord">DISCORD</i></a>
+                    <a href="#"><i class="fab fa-twitter">GITHUB</i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Legal</h3>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © 2025 Zion Movie Platform. Plug into the cybernetic dream.
+        </div>
+    </footer>    
+
+    <script src="{% static 'js/script.js' %}" defer></script>
+
+</body>
+</html>

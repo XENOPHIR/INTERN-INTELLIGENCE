@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ZION - SEARCH{% endblock %}
+
+{% block content %}
+    <section class="search-page">
+        <h1 class="glitch-text">Search Movies</h1>
+
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Enter movie title..." />
+            <button class="neon-button search-btn" id="search-button">Search</button>
+        </div>
+
+        <div id="movies-container-search" class="movies-grid"></div>
+    </section>
+
+    <script src="{% static 'js/search.js' %}"></script>
+{% endblock %}

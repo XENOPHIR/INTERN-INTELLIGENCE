@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ZION - MOVIES LIST{% endblock %}
+
+{% block content %}
+
+    <section class="movies-page">
+        <h1 class="glitch-text">Movies</h1>
+
+        <div class="movies-filters">
+            <select id="genre-filter-movies">
+                <option value="">All Genres</option>
+                <option value="28">Action</option>
+                <option value="878">Sci-Fi</option>
+                <option value="27">Horror</option>
+                <option value="53">Thriller</option>
+                <option value="12">Adventure</option>
+                <option value="35">Comedy</option>
+            </select>
+
+            <select id="sort-filter-movies">
+                <option value="popularity.desc">Popularity</option>
+                <option value="release_date.desc">Newest</option>
+                <option value="release_date.asc">Oldest</option>
+                <option value="original_title.asc">A-Z</option>
+                <option value="original_title.desc">Z-A</option>
+            </select>
+
+            <button class="neon-button movies-button" id="apply-filters-movies">Apply</button>
+        </div>
+
+        <div id="movies-container-page" class="movies-grid"></div>
+    </section>
+
+    <script src="{% static 'js/movies.js' %}"></script>
+
+{% endblock %}

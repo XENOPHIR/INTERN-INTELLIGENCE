@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}ZION - MOVIE DEATAIL{% endblock %}
+
+{% block content %}
+    <section class="movie-detail">
+        <div class="background-overlay"></div>
+
+        <div class="movie-container">
+            <div class="movie-poster">
+                <img id="movie-poster" src="" alt="Movie Poster">
+            </div>
+            <div class="movie-info">
+                <h1 id="movie-title" class="glitch-text">Movie Title</h1>
+                <p id="movie-year" class="movie-meta">Year: </p>
+                <p id="movie-genre" class="movie-meta">Genre: </p>
+                <p id="movie-overview" class="movie-description"></p>
+                <p class="rating">⭐ <span id="movie-rating">0.0</span>/10</p>
+
+                <div class="buttons">
+                    <button id="watch-trailer" class="neon-button">Watch Trailer</button>
+                    <a href="/" class="neon-button">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

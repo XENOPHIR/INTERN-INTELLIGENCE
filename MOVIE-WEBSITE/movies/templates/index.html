@@ -1,0 +1,92 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Zion Movie Platform{% endblock %}
+
+{% block content %}
+
+    <section class="hero" id="hero">
+        <div class="hero-overlay">
+            <div class="hero-text">
+                <h1 class="glitch-text">ZION MOVIES</h1>
+                <p class="movie-details">
+                    Enter the neon-lit virtual world of cinema.  
+                </p>
+                <p class="movie-description">
+                    From retro-futuristic classics to high-tech dystopias – experience movies like never before. Plug in and lose yourself in the cybernetic dream.
+                </p>
+                <button class="neon-button" onclick="scrollToMovies()">Start Watching</button>
+            </div>            
+            
+            <section class="categories">
+                <button class="category-button" onclick="scrollToAction()">Action</button>
+                <button class="category-button" onclick="scrollToSciFi()">Sci-Fi</button>
+                <button class="category-button" onclick="scrollToHorror()">Horror</button>
+                <button class="category-button" onclick="scrollToThriller()">Thriller</button>
+            </section>
+        </div>
+    </section>
+
+    <!-- Popular Movies -->
+    <section class="movies-section">
+        <div class="movies-banner">
+            <h2 class="glitch-text">Popular Movies</h2>
+        </div>
+        <div class="scroll-buttons">
+            <button class="scroll-btn scroll-left">‹</button>
+            <div id="movies-container-popular" class="movies-grid"></div>
+            <button class="scroll-btn scroll-right">›</button>
+        </div>
+    </section>
+
+    <!-- Action Movies -->
+    <section class="movies-section">
+        <div class="movies-banner">
+            <h2 class="glitch-text">Action Movies</h2>
+        </div>
+        <div class="scroll-buttons">
+            <button class="scroll-btn scroll-left">‹</button>
+            <div id="movies-container-action" class="movies-grid"></div>
+            <button class="scroll-btn scroll-right">›</button>
+        </div>
+    </section>
+
+    <!-- Sci-Fi Movies -->
+    <section class="movies-section">
+        <div class="movies-banner">
+            <h2 class="glitch-text">Sci-Fi Movies</h2>
+        </div>
+        <div class="scroll-buttons">
+            <button class="scroll-btn scroll-left">‹</button>
+            <div id="movies-container-scifi" class="movies-grid"></div>
+            <button class="scroll-btn scroll-right">›</button>
+        </div>
+    </section>
+
+    <!-- Horror Movies -->
+    <section class="movies-section">
+        <div class="movies-banner">
+            <h2 class="glitch-text">Horror Movies</h2>
+        </div>
+        <div class="scroll-buttons">
+            <button class="scroll-btn scroll-left">‹</button>
+            <div id="movies-container-horror" class="movies-grid"></div>
+            <button class="scroll-btn scroll-right">›</button>
+        </div>
+    </section>
+
+    <!-- Thriller Movies -->
+    <section class="movies-section">
+        <div class="movies-banner">
+            <h2 class="glitch-text">Thriller Movies</h2>
+        </div>
+        <div class="scroll-buttons">
+            <button class="scroll-btn scroll-left">‹</button>
+            <div id="movies-container-thriller" class="movies-grid"></div>
+            <button class="scroll-btn scroll-right">›</button>
+        </div>
+    </section>
+
+    <button id="scroll-to-top" class="scroll-to-top" onclick=scrollToTop()>↑</button>
+
+{% endblock %}
