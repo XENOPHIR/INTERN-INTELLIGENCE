@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}">
+</head>
+<body>
+
+    <!-- MATRIX -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- BG-CONTAINER -->
+    <div class="bg-container">
+        <img src="{% static 'images/bg_cyberpunk.png' %}" id="bg-image" alt="Cyberpunk City">
+
+        <!-- RAIN -->
+        <canvas id="rain-canvas"></canvas>
+
+        <!-- LOGIN -->
+        <div class="login-container">
+            <h1 class="glitch">ZION LOGIN</h1>
+            <form id="login-form">
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Enter the System</button>
+            </form>
+            <p id="error-message" class="hidden"></p>
+        </div>
+    </div>
+
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

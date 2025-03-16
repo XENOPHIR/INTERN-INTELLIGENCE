@@ -1,0 +1,103 @@
+/* BODY */
+body {
+    margin: 0;
+    font-family: 'Courier New', monospace;
+    background: black;
+    color: #FF00FF;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* MATRIX */
+.matrix-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    pointer-events: none;
+}
+
+/* IMAGE-CONTAINER */
+.bg-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    border: 3px solid rgba(255, 0, 255, 0.7);
+    box-shadow: 0px 0px 30px rgba(255, 0, 255, 0.7);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* IMAGE */
+#bg-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* RAIN-CANVAS */
+#rain-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* LOGIN-CONTAINER */
+.login-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid rgba(0, 255, 255, 0.7);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.7);
+    align-items: center;
+    justify-content: center;
+    z-index: 3;
+}
+
+/* INPUT */
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    background: black;
+    border: 1px solid #FF00FF;
+    color: #FF00FF;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 10px;
+    background: black;
+    border: 1px solid #FF00FF;
+    color: #FF00FF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #FF00FF;
+    color: black;
+}
