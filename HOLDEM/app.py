@@ -9,14 +9,14 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
-app.secret_key = b'\xfd\xe1O\x98\xb3\xd8\xc7z\x1d\xcf9\x93\x1b\xd6u\xc8\xf9\xc7I\xb8\xf3l\xd2\xf0'
+app.secret_key = "SECRET_KEY"
 
 # SMTP Configuration
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'edu.notexxx@gmail.com'
-app.config['MAIL_PASSWORD'] = 'ultl mwsi dzvb wjyy'
+app.config['MAIL_USERNAME'] = 'YOUR_GMAIL'
+app.config['MAIL_PASSWORD'] = 'YOUR_PASS'
 
 mail = Mail(app)
 
